@@ -21,12 +21,17 @@ const server = http.createServer((req, res)=>{
             res.end(data);
         });
 
-    }else if(url === '/contact'){
-        res.writeHead(200, {'Content-type': 'text/html'})
+    }
+    else if(url === '/contact'){
+
         fs.readFile(path.join(__dirname, 'contact.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
         });
+
+    }else{
+        res.write("<h1>404</h1>")
+        res.end();
     }
 
 
