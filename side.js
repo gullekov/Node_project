@@ -9,17 +9,20 @@ const server = http.createServer((req, res)=>{
     let url = req.url;
 
     if(url === '/'){
+      
         fs.readFile(path.join(__dirname, 'index.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
         });
     }else if(url === '/services'){
+
         fs.readFile(path.join(__dirname, 'services.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
         });
 
     }else if(url === '/contact'){
+        res.writeHead(200, {'Content-type': 'text/html'})
         fs.readFile(path.join(__dirname, 'contact.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
