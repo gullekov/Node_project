@@ -27,9 +27,6 @@ const server = http.createServer((req, res)=>{
             if(err) throw err;
             res.end(data);
         });
-    }else{
-        
-        res.end();
     }
 
 
