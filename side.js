@@ -13,7 +13,7 @@ const server = http.createServer((req, res)=>{
         fs.readFile(path.join(__dirname, 'index.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
-        });
+        }); 
     }else if(url === '/services'){
 
         fs.readFile(path.join(__dirname, 'services.html'), 'utf-8', (err, data)=>{
@@ -27,9 +27,17 @@ const server = http.createServer((req, res)=>{
         fs.readFile(path.join(__dirname, 'contact.html'), 'utf-8', (err, data)=>{
             if(err) throw err;
             res.end(data);
-        });
+        })
 
-    }else{
+        }
+        else if(url === '/product'){
+            fs.readFile(path.join(__dirname, 'product.html'), (err,data)=>{
+            if(err) throw err;
+            res.end(data);
+            })
+        }
+
+        else{
         res.write("<h1>404</h1>")
         res.end();
     }
