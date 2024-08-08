@@ -1,0 +1,15 @@
+{
+  "name": "lesson13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "side.js",
+  "scripts": {
+    "start": "node side.js",
+    "dev": "nodemon side.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
