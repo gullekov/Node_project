@@ -1,7 +1,8 @@
 const http = require('http')
 const fs = require('fs');
 const path = require('path')
-
+const port = 2000;
+const hostname = '127.0.0.1'
 
 
 const server = http.createServer((req, res)=>{
@@ -47,6 +48,6 @@ const server = http.createServer((req, res)=>{
 });
 
 
-server.listen(2000, '127.0.0.1', ()=>{
-    console.log("2000 port running")
+server.listen(port, hostname, ()=>{
+    console.log(`2000 port running ${port} ${hostname}`)
 })
