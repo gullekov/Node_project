@@ -18,14 +18,13 @@ app.get('/about', (req, res)=>{
     res.render('about')
    
 })
-// redirects
-    app.get('/about-us', (req, res)=>{
-        // res.redirect('/about')
-    })
 
-    app.use((req, res)=>{
-        // res.sendFile('./views/404.html', {root:__dirname})
-    })
+app.get('/blogs/create', (req, res)=>{
+    res.render('create')
+})
 
 
+app.use((req, res)=>{
+    res.status(404).render('404')
+})
 
