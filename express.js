@@ -13,6 +13,13 @@ app.get('/about', (req, res)=>{
     app.get('/about-us', (req, res)=>{
         res.redirect('/about')
     })
+
+    app.use((req, res)=>{
+        res.sendFile('./views/404.html', {root:__dirname})
+    })
+
+
+
 app.listen(2001, ()=>{
     console.log('port ilsedi')
 })
