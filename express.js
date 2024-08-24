@@ -25,7 +25,7 @@ app.get('/blogs/create', (req, res)=>{
 
 app.get('/404', (req, res)=>{
     res.render('404', {title: '404'})
-    res.status(200)
+   
 })
 
 
