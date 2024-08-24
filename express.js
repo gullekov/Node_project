@@ -23,6 +23,10 @@ app.get('/blogs/create', (req, res)=>{
     res.render('create', {title: 'Create'})
 })
 
+app.get('/404', (req, res)=>{
+    res.render('404', {title: '404'})
+})
+
 
 app.use((req, res)=>{
     res.status(404).render('404', {title: '404'})
