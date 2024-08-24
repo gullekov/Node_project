@@ -1,3 +1,4 @@
+const { renderFile } = require('ejs');
 const express = require('express');
 const app = express();
 
@@ -25,7 +26,8 @@ app.get('/blogs/create', (req, res)=>{
 
 app.get('/404', (req, res)=>{
     res.render('404', {title: '404'})
-   
+    res.status(200)
+    res.renderFile('/kkkk')
 })
 
 
