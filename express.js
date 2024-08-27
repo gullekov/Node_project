@@ -23,13 +23,13 @@ app.get('/about', (req, res)=>{
 app.get('/blogs/create', (req, res)=>{
     res.render('create', {title: 'Create'})
     res.status(200)
-    res.renderFile('/kkkk')
+    
 })
 
 app.get('/404', (req, res)=>{
     res.render('404', {title: '404'})
     res.status(200)
-    res.renderFile('/kkkk')
+    
 })
 
 
