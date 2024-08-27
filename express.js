@@ -23,6 +23,7 @@ app.get('/about', (req, res)=>{
 app.get('/blogs/create', (req, res)=>{
     res.render('create', {title: 'Create'})
     res.status(200)
+    console.log("<h1>sss</h1>")
     
 })
 
